@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  distro:
+    image: alpine
+    restart: always
+    container_name: Alpine_Distro
+    entrypoint: tail -f /dev/null

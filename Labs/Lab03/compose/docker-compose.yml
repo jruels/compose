@@ -1,0 +1,9 @@
+version: '2'
+services:
+  helloworld:
+    build: ./helloworld
+    image: helloworld:1.0
+    ports:
+    - "5000:5000"
+    volumes:
+    - ../helloworld:/code

@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  distro:
+    image: alpine
+    container_name: Alpine_Distro
+    restart: always
+    entrypoint: tail -f /dev/null
+
+  database:
+    image: postgres:latest
+    container_name: postgres_db
+    volumes:
+      - ../dumps:/tmp/
+    ports:
+      - "5432:5432"
